@@ -1,0 +1,80 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<style>
+	body{
+		 background-image: linear-gradient(to right, #141e30 , #243b55);
+	}
+form {
+    margin: auto;
+   color: #ffffff;
+   font-size: 18px;
+    width: 35%;
+    
+}
+.result {
+    margin: auto;
+    width: 35%;
+    color: #ffffff;
+   
+    border: 1px solid #ccc;
+}
+.heading{
+	margin-top:4em;
+	margin-bottom: 3em;
+	text-align: center;
+	font-size: 25px;
+}
+</style>
+<head>
+	<title>Diabetes predictor for women</title>
+</head>
+<body>
+	<div class="heading">
+		<p ><h2 style="color: #ffffff" >Diabetes predictor for women</h2></p>
+	</div>
+<form action="{{ url_for('main') }}" method="POST" >
+	<fieldset>
+		Number of times pregnant:<br>
+		<input type="number" name="pregnant">
+		<br>
+		<br>
+		Plasma glucose concentration a 2 hours in an oral glucose tolerance test:<br>
+		<input type="number" name="glucose">
+		<br>
+		<br>
+		Diastolic blood pressure (mm Hg):<br>
+		<input type="number" name="bp">
+		<br>
+		<br>
+		Triceps skin fold thickness (mm):<br>
+		<input type="number" name="skin">
+		<br>
+		<br>
+		2-Hour serum insulin (mu U/ml):<br>
+		<input type="number" name="insulin">
+		<br>
+		<br>
+		Body mass index (weight in kg/(height in m)^2):<br>
+		<input type="number" name="bmi">
+		<br>
+		<br>
+		Diabetes pedigree function:<br>
+		<input type="float" name="pedigree">
+		<br>
+		<br>
+		Age (years):<br>
+		<input type="number" name="age">
+		<br>
+		<br>
+		<input type="submit" name="submit">
+	</fieldset>
+</form>
+
+<br>
+<div class="result" align="center">
+         Prediction:
+           <p style="font-size:30px">{{ result }}</p>
+  </div>
+</body>
+</html>
