@@ -32,7 +32,12 @@ def main():
 
         prediction =models.predict(input_variable)
         print(prediction)
-        return flask.render_template('main.html',result=prediction)
+        global results
+        if(prediction == 1):
+            results='Test Positive'
+        else:
+            results='Test Negative '
+        return flask.render_template('main.html',result=results)
 
 
 if __name__ == '__main__':
