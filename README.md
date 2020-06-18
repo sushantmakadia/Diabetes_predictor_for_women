@@ -1,3 +1,3 @@
 # Diabetes_predictor_for_women
 Demo link:
-https://diabetes-predictor-for-women.herokuapp.com/  
+https://diabetes-predictor-for-women.herokuapp.com/
